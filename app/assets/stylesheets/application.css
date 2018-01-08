@@ -1,0 +1,189 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+.navbar{
+	width:95%;
+	height: 7%;
+	background-color: #0C74EC;
+	margin-left: 2%;
+	position: absolute;
+	margin-top: 20px;
+}
+
+.navbar_button{
+	float:left;
+	height:100%;
+	width:25%;
+	background-color: #0C74EC;
+	margin-left: 3%;
+	margin-right: 3%;
+}
+
+.navbar_button_post{
+	float:left;
+	margin-right: 2%;
+	margin-left: 5%;
+	height:100%;
+	width:20%;
+	background-color: #0C74EC;
+}
+
+.navbar_slivers{
+	float:left;
+	margin-top: 3px;
+	height:85%;
+	width:.1%;
+	background-color: white;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+.navbar_sliver2{
+	float:left;
+	margin-top: 3px;
+	height:85%;
+	width:.1%;
+	background-color: white;
+	margin-left: 3%;
+	margin-right: 1%;
+}
+
+.navbar_button_text{
+	text-align: center;
+	color:white;
+	margin-top: 15px;
+}
+
+
+.post_preview{
+	width:20%;
+	height:320px;
+	background-color:#0C74EC;
+	float:left;
+	margin-left: 5%;
+}
+
+.post_preview-0{
+	width:20%;
+	height:320px;
+	background-color:#0C74EC;
+	float:left;
+	margin-left: 22%;
+}
+
+.listings-images{
+	position: relative;
+	max-width: 100%;
+	max-height: 290px;
+	float: center;
+	padding-top: 10px;
+}
+
+.preview-title{
+	margin-top: 10px;
+	text-align:left;
+	margin-left: 10px;
+	width: 20%;
+	position: absolute;
+}
+
+.preview-category{
+	margin-top: 10px;
+	text-align:right;
+	padding-right: 10px;
+}
+
+.show-main{
+	margin-left: 10%;
+}
+
+.thin-sliver{
+	height:100%;
+	width: 5px;
+	position: absolute;
+	background-color: #0C74EC;
+	margin-left: 17%;
+	top:60px;
+}
+
+.show-title{
+	font-size: 40px;
+}
+
+.show-description{
+
+}
+
+.show-price{
+	font-size: 30px;
+	margin-left: 700px;
+}
+
+.show-contact{
+
+}
+
+.show-image{
+	width: 60%;
+	float: center;
+}
+
+.show-image-bar{
+
+}
+
+
+.new-post-title{
+	margin-top: 3%;
+	float: center;
+	margin-left: 45%;
+}
+
+.new-post-image{
+	float: center;
+	margin-left: 45%;
+}
+
+.new-post-description{
+	float: center;
+	margin-left: 28%;
+	margin-top: 5px;
+}
+
+.new-post-category{
+	float: center;
+	margin-left: 45%;
+}
+
+.new-post-price{
+	float: center;
+	margin-left: 45%;
+}
+
+.new-post-contact{
+	float: center;
+	margin-left: 45%;
+}
+
+.new-post-submit{
+	float: center;
+	margin-left: 45%;
+}
+
+label{
+	display: block;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	  <%= favicon_link_tag asset_path('logo.png'), :rel => 'icon', :type =>  'image/png' %>
+    <title>MilkyPosts</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+      <div class="navbar">
+        <div class="navbar_button">
+          <div class="navbar_button_text">
+            Astronomy
+          </div>
+        </div>
+          <div class="navbar_slivers">
+          </div>
+         <div class="navbar_button">
+         <div class="navbar_button_text">
+            Astrophotography
+          </div>
+        </div>
+        <div class="navbar_sliver2"%>
+          </div>
+         <div class="navbar_button_post">
+           <div class="navbar_button_text">
+           <%= link_to "Post", listings_new_path%>
+           </div>
+          </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="thin-sliver"></div>
+      <%= yield %>
+  </body>
+</html>

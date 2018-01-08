@@ -1,0 +1,29 @@
+<% loopnum=0%>
+<% @posts.each do |current_post|%>
+		<%if loopnum==0%>
+			<div class="post_preview-0">
+		<%else%>
+			<div class="post_preview">
+		<%end%>
+		<div class="preview-title">
+			<%= link_to current_post.title, listings_show_path(id: current_post.id)%>
+		</div>
+		<div class="preview-category">
+			<%=current_post.category.title%>
+		</div>
+		<%if current_post.images.length!=0%>
+			<div class="listings-images" align="center">
+				<%=image_tag current_post.images[0].image.url, class:"listings-images"%>
+			</div>
+		<%else%>
+		<p align="center">No image available</p>
+		<%end%>
+	</div>
+	<%loopnum+=1%>
+	<%if loopnum/3 == loopnum.to_f/3%>
+		<br><br><br><br><br><br><br>
+		<br><br><br><br><br><br><br>
+		<br><br><br><br><br><br>
+		<%loopnum=0%>
+	<% end %>
+<% end %>

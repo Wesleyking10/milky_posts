@@ -1,0 +1,61 @@
+<%= form_with(model: post, local: true) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="new-post-title">
+  <div class="field">
+    <%= form.label "Title" %>
+    <%= form.text_field :title%>
+  </div>
+</div>
+
+<div class="new-post-image">
+  <div class="field">
+    <%= form.label "Images" %>
+    <%= form.file_field :image%>
+  </div>
+</div>
+
+<div class="new-post-description">
+  <div class="field">
+    <%= form.label "Content" %>
+    <%= form.text_area :description, options = {style:"height:500px; width:900px;"}%>
+  </div>
+</div>
+
+<div class="new-post-price">
+     <div class="field">
+    <%= form.label "Price" %>
+    <%= form.text_field :price%>
+  </div>
+</div>
+
+<div class="new-post-contact">
+     <div class="field">
+    <%= form.label "Email or Phone" %>
+    <%= form.text_field :contact%>
+  </div>
+</div>
+
+<div class="new-post-category">
+    <div class="field">
+    <%= form.label "Category" %>
+        <%= form.select :category_id, @categories.collect {|c| [c.title, c.id]}%>
+  </div>
+</div>
+
+<div class="new-post-submit">
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+</div>
+<% end %>

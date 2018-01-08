@@ -1,0 +1,18 @@
+<div class="show-main" align="center">
+	<div class="show-title">
+		<%= @post.title %>
+	</div>
+	<br>
+	<div class="show-price">
+		<%=@post.price%>
+	</div>
+	<% if @post.images[0]%>
+			<%=image_tag @post.images[0].image.url, class:"show-image"%>
+	<%end%>
+	<div class="show-description">
+		<%=@post.description%>
+	</div>
+	<div class="show-contact">
+		<p>You can contact me at: <%=@post.contact%></p>
+	</div>
+</div>
