@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def listings
   	@posts=Post.all
+    @categories = Category.all
   end
   def new
   	@post = Post.new
@@ -24,7 +25,6 @@ class PostsController < ApplicationController
         if !post_params[:category].blank?
           @category = Category.create({category: post_params[:category], post_id: @post.id})
         end
-
         format.html { redirect_to listings_path, notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, post: @post }
       else
